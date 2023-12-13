@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Compare Artists{% endblock %}
+
+{% block content %}
+    <form action="/results" method="post">
+        <div class="mb-3">
+            <label for="artist1" class="form-label">First Artist</label>
+            <input type="text" class="form-control" id="artist1" name="Artist1" required>
+        </div>
+        <div class="mb-3">
+            <label for="artist2" class="form-label">Second Artist</label>
+            <input type="text" class="form-control" id="artist2" name="Artist2" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

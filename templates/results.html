@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c3e50; /* Set the background color to a dark blue-gray */
+            color: white; /* Set the text color to light gray */
+        }
+
+        h1 {
+            margin-top: 20px; /* Add some top margin to the heading */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around; /* Center the images */
+            margin-top: 20px;
+        }
+
+        .image-container div {
+            text-align: center;
+            margin: 0 15px; /* Add a small margin around each image container */
+        }
+
+        .image-container img {
+            width: 350px; /* Adjust the width as needed */
+            height: auto;
+            border: 4px solid #3498db; /* Set a default border color for all images */
+            border-radius: 8px;
+            margin-bottom: 15px; /* Add a bit more separation between images */
+            transition: transform 0.3s; /* Add a smooth transition effect on hover */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* Enlarge the image on hover */
+        }
+
+        .image-container div:first-child img {
+            border: 4px solid #e74c3c; /* Set a red border for the first image */
+        }
+
+        .image-container p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>{{name1}} is more popular than {{name2}}</h1>
+
+    <div class="image-container">
+        <div>
+            <img src="{{url1}}" alt="Image 1">
+            <p>Name: {{name1}} </p>
+            <p>Followers: {{fol1}}</p>
+            <p>Genres:</p>
+            <p>{{gen1}}</p>
+        </div>
+        <div>
+            <img src="{{url2}}" alt="Image 2">
+            <p>Name: {{name2}} </p>
+            <p>Followers: {{fol2}}</p>
+            <p>Genres: </p>
+            <p>{{gen2}}</p>
+        </div>
+    </div>
+    <form action="/" method="post">
+        <button type="submit" class="btn btn-primary">Go Back</button>
+    </form>
+</body>
+</html>
