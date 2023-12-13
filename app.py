@@ -99,5 +99,5 @@ def login():
 def authorize():
     token = oauth.spotify.authorize_access_token()
     session["spotify-token"] = token
-    return token
+    return  redirect(url_for("index"))
 
